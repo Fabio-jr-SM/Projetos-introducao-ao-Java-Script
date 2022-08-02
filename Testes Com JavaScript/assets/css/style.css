@@ -76,6 +76,18 @@ footer{
     justify-content: space-evenly;
 }
 
+.dialogo{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.c_dialogo{
+    width: 20%;
+    box-shadow: #000 2px 3px 2px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
 .metodo_getElementById{
     width: 20%;
     box-shadow: #000 2px 3px 2px;
