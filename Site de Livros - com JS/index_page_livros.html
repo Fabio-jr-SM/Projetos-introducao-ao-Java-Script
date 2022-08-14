@@ -40,13 +40,17 @@
         <main>
             <div class="list_livros">
                 <figcaption>
-                    <legend>O que aconteceu Com Annie</legend>
+                    <legend id="titulo">O que aconteceu Com Annie</legend>
                     <div id="img-livro">
                         <img src="./assets/img_livros/O que aconteceu com Annie.jpeg" alt="o que aconteceu com Annie">
                     </div>
                     <p>C.J. Tudor</p>
                     <p>Mistério</p>
                 </figcaption>
+
+                <div class="buttonNext">
+                    <button onclick="buttonNext()"><p class="pButton">Next<ion-icon name="arrow-forward-circle-outline"></ion-icon></p></button>
+                </div>
             </div>
         </main>
 
@@ -57,6 +61,7 @@
         </footer>
     </div>
 
+    <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
