@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tudo">
+        <header>
+            <h1>Testes Com JavaScript</h1>
+            <nav>
+                <a href="./pages.html">
+                    <ion-icon name="newspaper-outline"></ion-icon>Pages
+                </a>
+                <a href="#">
+                    <ion-icon name="call-outline"></ion-icon>Contato
+                </a>
+                <a href="#">
+                    <ion-icon name="school-outline"></ion-icon>school
+                </a>
+                <a href="#">
+                    <ion-icon name="log-in-outline"></ion-icon>Sair
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2 id="saudacao"></h2>
+                <p id="demo"></p>
+
+                <button onclick="myStop()">Stop the time</button>
+                <button onclick="openClose()">Explicação</button>
+
+                <script>
+                    const myInterval = setInterval(myTimer, 1000);
+
+                    function myTimer() {
+                        const date = new Date();
+                        document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+                    }
+
+                    function myStop() {
+                        clearInterval(myInterval);
+                    }
+                </script>
+
+                <p id="time">O setInterval() é uma função temporizadora. Ela executa uma função de retorno após determinado tempo. A função setInterval() executará infinitamente, até que você execute a função clearInterval().</p>
+
+                <p id="time2">
+                    Sendo uma função assíncrona, a instrução a ser executada é lançada no Event Loop. Mas o que é Event Loop? É uma instrução síncrona, ou seja, quando ela estiver executando, a thread ficará bloqueada e, assim que terminar, a próxima instrução é executada. Como o setInterval() executará infinitamente, sabemos que ele adicionará uma instrução ao Event Loop a cada quantia de tempo que for definida.</p>
+    
+
+                <h3>O que é o JavaScript para que serve?</h3>
+                <p>JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas
+                    web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática
+                    — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D
+                    animados, etc.</p>
+
+                <div class="img">
+                    <a
+                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATcAAACiCAMAAAATIHpEAAABI1BMVEX/uxz7nBz////8/////v/+mh7///3+uxv//f/7ohz5///6nRr/uh79vBr///n///f0umT+twD7lwD7y1z3mgD7nBb3pjr8lgD+9Or2///6nB//uCH87dD44sT9miL7//z///P3zpT326v3niH/siH/uCT6vCP+tQD4pBb+/OT//+/+mCf5myn97cj/9/bypj33y4r53rjyvAT/9Mb/+Nr5vVb1x07xx3z/rAD50Xn20qf5wkH77b733ZL63aH6ymv502vy1HX535D54qr5xE388N3zzFnzpy/57LDxszb3ypf2wXzzpxP0wTXvsEP8+9LsvmD1sFn34pvzvivkpzXuvWz21nH74rP8rVPzrTr2unj65dLmsEfysmP1q0nvwnX5yImKOPAtAAAVMklEQVR4nO1cjV/T2LZtcvL9SY5JQ5PSpKSUtlBLkfEDER2xl7kUva/6FB0vjP//X/HWTvkcwREo8KhZOvOTtjk9Z5219177pKVUKlCgQIECBQoUKFCgQIECBQoUKFCgQIECBQoUKFCgQIECBQoUKFCgQIECBQoUKFCgQIECBQoUKFCgQIECBQoUKFCgQIECBQoUmAisUkm1gZJlq3c9l3sEO7btmLCqNlXrrmdzf2Bb1uqjNrD2m2ff9WTuEWzVeixKAHvydOGuJ3MfAMKQ2JDV7GdMAcR1v5E/YlulC4SnIhl6nlqiP5OBSgN5OfI5laxLpQqazD8FiW1PNPvEq3b8/NFG0469F5JI6PLg6erm2stVSz13LsSo9/zVy7fxqtWczCQsu+nZz1++2Nx8/epxc5ESxU8uUlVV23v7+vXjxdX4wk20SBtI35PMP+DrcUfU1h54H7oJ0cbaPd6rGprz0jt/020r9n5vS6z9m70wmZmodmPhdTtlLEmY6LS33ngxmPy5S6HUx50K67z0fkDLatNajBdLE9rlHLb3ZpZpScX5o63lctOkdr+juUkC4s6diWU3mqnoKGywOJkwVUve6zZDcmWKpEmOkaQbb72FnxMcrJPXlRJMZvfipBHHXunV69/fehPLK8DzNeYooiI5WofiVHE0Q5Qc8Mc6D7zzLlhYjf8lSgletN2YiN5U7w8xocyK/5xEETWFtV/9ZDYCb4ttRVOSNGtdOBl4hdei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"><img
+                            src="./assets/img/JavaScript.png" alt="figura-triangular"></a>
+                </div>
+            </section>
+
+            <br><br>
+            <hr style="width: 90%;">
+            <br><br>
+
+            <h3>Caixas de Diálogos</h3>
+            <div class="dialogo">
+                <div class="c_dialogo">
+                    <p>Você pode pular a palavra-chave.window
+
+                        Em JavaScript, o objeto de janela é o objeto de escopo global, o que significa que variáveis,
+                        propriedades e métodos por padrão pertencem ao objeto da janela. Isso também significa que
+                        especificar a palavra-chave é opcional:window:</p>
+                    <p><span>window.alert()</span></p>
+                    <button type="button" onclick="alert('Estou mostrando um alerta')">Caixa de dialogo Alert</button>
+
+                    <br><br>
+
+                </div>
+
+                <div class="c_dialogo">
+                    <p>Você pode pular a palavra-chave.window
+
+                        Uma caixa de prompt é usada se você quiser que o usuário insira um valor.
+                        Quando uma caixa de prompt aparece, o usuário terá que clicar em "OK" ou "Cancelar" para continuar.
+                        Não abuse desse método. Impede que o usuário acesse outras partes da página até que a caixa seja fechada.</p>
+                    <p><span>window.prompt()</span></p>
+                    <p>Seu nome: </p><p id="prompt"></p>
+                    <button type="button" onclick="functionPrompt()">Caixa de dialogo Prompt</button>
+
+                    <br><br>
+
+                </div>
+                
+                <div class="c_dialogo">
+                    <p>Você pode pular a palavra-chave.window
+
+                        Uma caixa de confirmação é frequentemente usada se você deseja que o usuário verifique ou aceite algo.
+                        Uma caixa de confirmação tira o foco da janela atual e força o usuário a ler a mensagem.
+                        Não abuse desse método. Impede que o usuário acesse outras partes da página até que a caixa seja fechada.</p>
+                    <p><span>window.confirm()</span></p>
+                    <button type="button" onclick="functionConfirm()">Caixa de dialogo Confirm</button>
+
+                    <br><br>
+
+                </div>
+            </div>
+
+            <br><br>
+            <hr style="width: 90%;">
+            <br><br>
+
+            <h3>Metodo getElementById</h3>
+            <div class="metodos">
+
+                <div class="metodo_getElementById">
+                    <p>Um dos muitos métodos HTML JavaScript é getElementById().
+                        O exemplo abaixo "encontra" um elemento HTML (com id="demo") e <span>altera o conteúdo do
+                            elemento (innerHTML) para "Hello JavaScript"</span>:</p>
+                    <p id="demo">JavaScript can change HTML content</p>
+                    <button type="button" onclick="clickButton_Demo()">Clique Para Mudar O Texo</button>
+
+                    <br><br>
+
+                </div>
+
+                <div class="metodo_getElementById">
+                    <p>Um dos muitos métodos HTML JavaScript é getElementById().
+                        O exemplo abaixo "encontra" um elemento HTML (com id="demo") <span>Altera o estilo de um
+                            elemento HTML é uma variante de alterar um atributo HTML</span>:</p>
+                    <p id="demo_test">JavaScript can change HTML content</p>
+                    <button type="button" onclick="clickButton_Demo_test()">Clique Para Mudar O Texo</button>
+
+                    <br><br>
+
+                </div>
+
+
+                <div class="metodo_getElementById">
+                    <p>Um dos muitos métodos HTML JavaScript é getElementById().
+                        O exemplo abaixo "encontra" um elemento HTML (com id="demo") <span>e Oculta elementos HTML que
+                            pode ser feito alterando o display estilo</span>:</p>
+                    <p id="demo_test_2">JavaScript can change HTML content</p>
+                    <button type="button" onclick="clickButton_Demo_test_2()">Clique Para Mudar O Texo</button>
+
+                    <br><br>
+
+                </div>
+            </div>
+
+            <br><br>
+        </main>
+
+        <footer>
+            <p>Site para iniciantes em JS</p>
+        </footer>
+    </div>
+
+    <script src="./assets/js/js.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+</body>
+
+</html>

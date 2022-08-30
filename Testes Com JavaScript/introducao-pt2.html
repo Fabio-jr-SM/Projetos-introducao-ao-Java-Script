@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tudo">
+        <header>
+            <h1>Testes Com JavaScript</h1>
+            <nav>
+                <a href="./pages.html">
+                    <ion-icon name="newspaper-outline"></ion-icon>Pages
+                </a>
+                <a href="#">
+                    <ion-icon name="call-outline"></ion-icon>Contato
+                </a>
+                <a href="#">
+                    <ion-icon name="school-outline"></ion-icon>school
+                </a>
+                <a href="#">
+                    <ion-icon name="log-in-outline"></ion-icon>Sair
+                </a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2 id="saudacao"></h2>
+                <p id="demo"></p>
+
+                <button onclick="myStop()">Stop the time</button>
+                <button onclick="openClose()">Explicação</button>
+
+                <script>
+                    const myInterval = setInterval(myTimer, 1000);
+
+                    function myTimer() {
+                        const date = new Date();
+                        document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+                    }
+
+                    function myStop() {
+                        clearInterval(myInterval);
+                    }
+                </script>
+
+                <div class="explicacao">
+                    <p id="time">O setInterval() é uma função temporizadora. Ela executa uma função de retorno após
+                        determinado tempo. A função setInterval() executará infinitamente, até que você execute a função
+                        clearInterval().</p>
+
+                    <p id="time2">
+                        Sendo uma função assíncrona, a instrução a ser executada é lançada no Event Loop. Mas o que é
+                        Event Loop? É uma instrução síncrona, ou seja, quando ela estiver executando, a thread ficará
+                        bloqueada e, assim que terminar, a próxima instrução é executada. Como o setInterval() executará
+                        infinitamente, sabemos que ele adicionará uma instrução ao Event Loop a cada quantia de tempo
+                        que for definida.</p>
+                </div>
+
+
+                <div class="conceito-de-array">
+                    <h3>O que é o Array em JavaScript</h3>
+                    <p>Um Array no JavaScript é um objeto com um construtor único, com uma sintaxe literal e com um
+                        conjunto
+                        adicional de propriedades e de métodos herdados de um protótipo de Array. Arrays em JavaScript
+                        são
+                        usados para armazenar vários valores em uma única variável.
+                    <p>
+
+                    <p>Adicionando elementos a um array
+
+                        O primeiro passo para adicionar um elemento em um array é definir em que posição queremos fazer
+                        isso. Uma alternativa é inserir um item no final do array. Para isso, utilizamos o método push
+                        (),
+                        que, além de adicionar o novo item na última posição, retorna o novo tamanho do array</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="uso-de-matrizes">
+                    <h2>Por que Usar Matrizes?</h2>
+                    <p>Os arrays são estruturas que servem para guardar dados, e organizá-los. Seu objetivo é ser um
+                        espaço
+                        fixo na memória do computador que armazena elementos. Esses elementos podem ser acessados por um
+                        tipo de indicação, que chamamos de índice.
+                    </p>
+                </div>
+
+                <div id="valoresIndice">
+                    <br>
+                    <label for="">Digite o Indice 0: </label><input type="text" id="input1">
+                    <br><br>
+                    <label for="">Digite o Indice 1: </label><input type="text" id="input2">
+                    <br><br>
+                    <label for="">Digite o Indice 2: </label><input type="text" id="input3">
+                    <br><br>
+                    <label for="">Digite o Indice 3: </label><input type="text" id="input4">
+                    <br><br>
+                </div>
+
+                <div id="buttonVetor">
+                    <button onclick="arrayVetor()">Mostrar Vetor</button>
+                    <p id="indice0"></p>
+                    <p id="indice1"></p>          
+                    <p id="indice2"></p>            
+                    <p id="indice3"></p>              
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/js.js"></script>
+    <script src="./assets/js/script_array.js"></script>
+</body>
+
+</html>
